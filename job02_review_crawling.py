@@ -152,12 +152,12 @@ def process_movie(movie_url):
 # ---------------------------
 def main():
     # Read movie links from CSV (expects a column "movie_link")
-    df_links = pd.read_csv("movie_links.csv")
+    df_links = pd.read_csv("movie_links2.csv")
     movie_links = df_links["movie_link"].tolist()
-    print(f"Read {len(movie_links)} movie links from movie_links.csv")
+    print(f"Read {len(movie_links)} movie links from movie_links2.csv")
 
     all_data = []
-    file_counter = 9
+    file_counter = 100
     movie_counter = 0  # Count movies processed in current file batch
 
     for idx, movie_url in enumerate(movie_links, start=1):
