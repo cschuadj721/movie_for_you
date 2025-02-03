@@ -105,7 +105,7 @@ print(f"Total movie links collected: {len(movie_links)}")
 
 # Save the movie links to a CSV file so you can reuse them later if needed.
 df_links = pd.DataFrame(movie_links, columns=["movie_link"])
-df_links.to_csv("movie_links.csv", index=False, encoding="utf-8-sig")
+df_links.to_csv("movie_links2.csv", index=False, encoding="utf-8-sig")
 print("Saved movie links to movie_links.csv")
 
 # ---------------------------
