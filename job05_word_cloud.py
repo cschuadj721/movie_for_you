@@ -11,9 +11,9 @@ plt.rc('font', family = 'NanumBarunGothic')
 df = pd.read_csv('./crawling_data/cleaned_reviews.csv')
 
 # 기본 설정 띄어쓰기 기준으로 단어들을 나누어 리스트로 만들기
-words = df.iloc[4,1].split()
+words = df.iloc[396,1].split()
 
-print(df.iloc[4,0])
+print(df.iloc[396,0])
 
 # collctions함수는 unique한 값이 몇 번 반복되는지를 보여준다
 # dictionary형태를 띄지만 dictionary는 아니다
