@@ -157,7 +157,7 @@ def main():
     print(f"Read {len(movie_links)} movie links from movie_links2.csv")
 
     all_data = []
-    file_counter = 100
+    file_counter = 122
     movie_counter = 0  # Count movies processed in current file batch
 
     for idx, movie_url in enumerate(movie_links, start=1):
