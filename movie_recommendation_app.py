@@ -39,8 +39,11 @@ class Exam(QWidget, form_window):
 
     def btn_slot(self):
         keyword = self.le_keyword.text()
-        recommendation = self.recommendation_by_keyword(keyword)
-        if(recommendation):
+        if keyword in self.titles:
+            recommendation = self.recommendation_by_title(keyword)
+        else:
+            recommendation = self.recommendation_by_keyword(keyword)
+        if recommendation:
             self.lbl_recommendation.setText(recommendation)
 
     def combobox_slot(self):
@@ -60,7 +63,7 @@ class Exam(QWidget, form_window):
         try:
             sim_word = self.embedding_model.wv.most_similar(keyword, topn=10)
         except:
-            self.lbl_recommend.set_Text('제가 모르는 단어에요')
+            self.lbl_recommendation.setText('제가 모르는 단어에요')
             return 0
 
         words =[keyword]
