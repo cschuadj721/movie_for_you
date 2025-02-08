@@ -23,21 +23,6 @@ Tfidf_matrix = mmread('./models/moviereview.mtx').tocsr()
 with open('./models/tfidf.pickle', 'rb') as f:
     Tfidf = pickle.load(f)
 
-# #영화 10번으로 테스트
-# ref_idx = 349
-# print(df_reviews.iloc[ref_idx, 0])
-#
-# #전체 영화 리스트에 대해 cosine sim 계산
-# cosine_sim = linear_kernel(Tfidf_matrix[ref_idx], Tfidf_matrix)
-#
-# print(cosine_sim[0:5])
-# print(len(cosine_sim))
-#
-# recommandations = getRecommendation(cosine_sim)
-# print(recommandations)
-#
-# # df_reviews.info()
-
 
 embedding_model =Word2Vec.load('./models/word2vec_movie_review.model')
 keyword = '공포'
