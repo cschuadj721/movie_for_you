@@ -124,7 +124,7 @@ def process_movie(movie_url):
     while len(reviews) < 50 and scroll_attempts < max_scroll_attempts:
         prev_count = len(reviews)
         scroll_down(driver, units=1, sleep_time=0.5)
-        time.sleep(2)
+        time.sleep(1)
         reviews = extract_reviews()
         if len(reviews) == prev_count:
             scroll_attempts += 1
@@ -157,7 +157,7 @@ def main():
     print(f"Read {len(movie_links)} movie links from movie_links2.csv")
 
     all_data = []
-    file_counter = 122
+    file_counter = 107
     movie_counter = 0  # Count movies processed in current file batch
 
     for idx, movie_url in enumerate(movie_links, start=1):
